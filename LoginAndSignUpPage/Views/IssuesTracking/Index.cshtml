@@ -40,15 +40,24 @@
                         @item.States
                     </td>
                     <td width="20%">
-                        <a href="@Url.Content("~/")@item.ScreenShotRelativePath" target="_blank">查看截图</a>
+                        <a href="@Url.Content("~/")@item.ScreenShotRelativePath" target="_blank">Issue Image</a>
                     </td>
-                    @* <td>
-                        <div role="group" class="w-60 btn-group">
-                            <a asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id" class=" btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>&nbsp;
-                            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash-fill"></i>Delete</a>
-                        </div>
-                    </td> *@
+                    <td width="15%">
+                        @{
+                            var logPath = Url.Content("~/") + @"Issues\5704362375234300001\Logs\MedDispense.UI.trace.log";//item.LogsRelativePath;
+                            <a href="/IssuesTracking/download?filename =@logPath" class="btn btn-sm btn-success">log download. @logPath</a>
+                        }
+                    </td>
+                    <td width="15%">
+                        @{
+                            var imgPath = Url.Content("~/") + @item.ScreenShotRelativePath;//item.LogsRelativePath;
+                                                                                           // <a href="@imgPath" download="@imgPath" class="btn btn-sm btn-success">log download. @logPath</a>
+
+                            <a>  @Html.ActionLink("Download", "Download", new { fileName = @item.LogsRelativePath });</a>
+                        }
+                    </td>
                 </tr>
+
             }
         </tbody>
     </table>
