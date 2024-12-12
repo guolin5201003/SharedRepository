@@ -24,7 +24,7 @@
 <body>
 
     <div class="wrapper">
-        <div class="top_navbar">
+        <div id="top_navbar" class="top_navbar">
             <div class="hamburger">
                 <div class="one"></div>
                 <div class="two"></div>
@@ -39,20 +39,22 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fas fa-bell"></i>
+                        <a asp-controller="Home" asp-action="Index">
+                                <span class="logo">D</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fas fa-user"></i>
-                        </a>
+                    <li>
+                        <a class="" asp-controller="Home" asp-action="Logout">
+                            <span class="logo">O</span>
+                            </a>
                     </li>
+                   
                 </ul>
             </div>
         </div>
 
-        <div class="sidebar" >
+        <div id="sidebar" class="sidebar">
             <ul>
 
                 <li>
