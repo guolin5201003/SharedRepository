@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="sidebar">
+        <div class="sidebar" >
             <ul>
 
                 <li>
@@ -62,26 +62,23 @@
                         <span class="title">Home</span>
                     </a>
                 </li>
-
-
-                <li>
-
-                    <a asp-controller="Employee" asp-action="Index">
-                        <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
-                        <span class="title">Employee</span>
-                    </a>
-                </li>
-
                 <li>
                     <a asp-controller="IssuesTracking" asp-action="Index">
                         <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
-                        <span class="title">Employee</span>
+                        <span class="title">Issues Tracking</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-leaf"></i></span>
-                        <span class="title">Abount</span>
+                    <a asp-controller="AssetsTracking" asp-action="Index">
+                        <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+                        <span class="title">Asset Tracking</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-controller="UpgradeTracking" asp-action="Index">
+                        <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+                        <span class="title">Upgrade Tracking</span>
                     </a>
                 </li>
             </ul>

@@ -3,19 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LoginFormASPCore6.Controllers
 {
-    public class IssuesTrackingController : Controller
+    public class AssetsTrackingController : Controller
 
     {
         private readonly MyDbContext _context;
 
-        public IssuesTrackingController(MyDbContext context)
+        public AssetsTrackingController(MyDbContext context)
         {
             _context = context;
         }
 
         public IActionResult Index()
         {
-            var issues = _context.LocalIssueTracking.ToList();
+            var issues = _context.LocalAssets.ToList();
             return View(issues);
         }
     }
