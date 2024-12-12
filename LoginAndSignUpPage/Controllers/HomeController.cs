@@ -96,10 +96,11 @@ namespace LoginFormASPCore6.Controllers
             if (HttpContext.Session.GetString("UserSession") != null)
             {
                 HttpContext.Session.Remove("UserSession");
+
                 return RedirectToAction("Login");
             }
 
-            return View();
+            return RedirectToAction("Login");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

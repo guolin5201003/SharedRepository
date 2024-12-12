@@ -2,7 +2,17 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
+<script>
+    var divSidebar=document.getElementById("sidebar");
+    if(divSidebar!=null){
+        divSidebar.style.display="block";
+    }
+     var top_navbar=document.getElementById("top_navbar");
+    if(top_navbar!=null){
+              top_navbar.style.visibility = 'visible';
 
+    }
+</script>
 <h1>Dashboard</h1>
 
 <div class="text-center">

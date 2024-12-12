@@ -27,7 +27,7 @@ namespace LoginFormASPCore6.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=V330_NTWC;User Id=sa;Password=MD123!@#;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=XIA-GUOGRA-LT\\SQLEXPRESS;Initial Catalog=V330_NTWC;User Id=sa;Password=MD123!@#;TrustServerCertificate=true");
             optionsBuilder.LogTo(msg =>
             {
                 Console.WriteLine(msg);
