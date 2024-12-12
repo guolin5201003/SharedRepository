@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Dashboard</h1>
+
+<div class="text-center">
+    <h4>Welcome @ViewData["MySession"]</h4>
+</div>
+
+<div class="container mt-4">
+    <!-- 添加一个容器并添加一些上边距 -->
+    <div class="row">
+        <!-- 使用Bootstrap的行来排列图片 -->
+        <div class="col-md-3">
+            <!-- 每张图片占据一列，这里设置为占据12栅格系统中的3栅格 -->
+            <div class="card mb-4 shadow-sm">
+                <!-- 使用Bootstrap的卡片组件 -->
+                <img src="path/to/your/image1.jpg" class="card-img-top img-fluid" alt="Description for Image 1"> <!-- 图片路径需要替换为您的图片路径，alt属性可以作为图片的描述，但这里我们用它来符合HTML规范 -->
+                <div class="card-body text-center">
+                    <p class="card-text position-absolute top-0 start-0 p-3" style="background: rgba(0, 0, 0, 0.5); color: white;">Image 1 Description</p> <!-- 描述文字，使用绝对定位放置在图片左上角，并设置背景色和文字颜色 -->
+                </div>
+            </div>
+        </div>
+        <!-- 重复上面的div.col-md-3三次，为其他三张图片创建卡片 -->
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <img src="path/to/your/image2.jpg" class="card-img-top img-fluid" alt="Description for Image 2">
+                <div class="card-body text-center">
+                    <p class="card-text position-absolute top-0 start-0 p-3" style="background: rgba(0, 0, 0, 0.5); color: white;">Image 2 Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <img src="path/to/your/image3.jpg" class="card-img-top img-fluid" alt="Description for Image 3">
+                <div class="card-body text-center">
+                    <p class="card-text position-absolute top-0 start-0 p-3" style="background: rgba(0, 0, 0, 0.5); color: white;">Image 3 Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <img src="path/to/your/image4.jpg" class="card-img-top img-fluid" alt="Description for Image 4">
+                <div class="card-body text-center">
+                    <p class="card-text position-absolute top-0 start-0 p-3" style="background: rgba(0, 0, 0, 0.5); color: white;">Image 4 Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

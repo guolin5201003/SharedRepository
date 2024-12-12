@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/LoginAndSignUpPage/bin/Debug/net6.0
+/LoginAndSignUpPage/.vs/LoginFormASPCore6/FileContentIndex
+/LoginAndSignUpPage/obj
