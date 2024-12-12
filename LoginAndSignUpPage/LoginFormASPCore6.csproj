@@ -23,4 +23,11 @@
     <Folder Include="wwwroot\Issues\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\CabImages\1\Cab.png" />
+    <None Include="wwwroot\images\CabImages\2\Cab.png" />
+    <None Include="wwwroot\images\CabImages\3\Cab.png" />
+    <None Include="wwwroot\images\CabImages\4\Cab.png" />
+  </ItemGroup>
+
 </Project>
