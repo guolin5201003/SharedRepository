@@ -16,7 +16,7 @@ namespace EmployeeCRUD.Controllers
      new Employee{  Name="Jim"},
      new Employee{ Name="Lina"} };
 
-            //IEnumerable<Employee> objCatlist = _context.Employees;
+            IEnumerable<Employee> ems = _context.Employees.ToList();
             return View(objCatlist);
         }
 
