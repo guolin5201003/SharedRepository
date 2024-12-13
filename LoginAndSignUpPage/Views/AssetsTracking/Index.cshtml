@@ -15,17 +15,17 @@
     }
 
     .image-container {
-        width: 300px; /* 你可以根据需要调整这个宽度 */
-        height: 200px; /* 你可以根据需要调整这个高度 */
-        overflow: hidden; /* 隐藏溢出部分 */
-        position: relative; /* 为了确保内部元素定位正确 */
+        width: 300px; 
+        height: 200px; 
+        overflow: hidden; 
+        position: relative; 
     }
 
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 保持图像的宽高比，并填充容器 */
-            display: block; /* 移除底部间隙 */
+            object-fit: cover;
+            display: block;
         }
 
 </style>
@@ -54,18 +54,22 @@
                             </td>
                             <td style="height:50%;border:solid #E2F29A 1px">
                                 <div class="container shadow">
-                                    <span style="font-size:30px;">S/N: 18-4X-5892</span>
+                                    <span style="font-size:20px;">S/N: 18-4X-5892</span><br/>
+                                    <span style="font-size:20px;">S/N: 20-5X-1234</span><br />
+                                    <span style="font-size:20px;">S/N: 22-5X-5901</span><br />
+
                                 </div>
                             </td>
                         </tr>
                         <tr style="height:50%;border:solid #E2F29A 1px">
                             <td>
-                                Date of manufacture: 2020
+                                Date of manufacture: 2020<br/>
+                                Firmware version: F8
                             </td>
                             <td style="height:50%;border:solid #E2F29A 1px">
                                 <div class="container shadow">
                                     <div class="image-container">
-                                        <img alt="" src="~/images/CabImages/1/Cab.png" />
+                                        <img id="cabimg" alt="" src="~/images/CabImages/1/Cab.png" />
                                     </div>
                                 </div>                                
                             </td>
@@ -89,7 +93,7 @@
 
                             @foreach (var item in Model)
                             {
-                                <tr style="cursor:pointer">
+                                <tr style="cursor:pointer" onclick="switchImg(@item.StationId)">
                                     <td width="20%" >
                                         @item.StationId
                                     </td>
@@ -108,3 +112,15 @@
         </tr>
     </table>
 </div>
+<script type="text/javascript">
+
+    function switchImg(id)
+    {
+        var cabimg = document.getElementById("cabimg");
+        if(cabimg)
+        {
+            cabimg.src="../images/CabImages/"+ id +"/Cab.png"
+        }
+    }
+
+</script>
